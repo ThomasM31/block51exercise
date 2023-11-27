@@ -2,6 +2,7 @@ package oopd_gu_chalmers;
 
 import oopd_gu_chalmers.polygons.polygon.Polygon;
 import oopd_gu_chalmers.polygons.polygon.PolygonFactory;
+import oopd_gu_chalmers.shapes.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -63,5 +64,4 @@ public class DrawPolygons2 extends JComponent{
         } catch (InterruptedException ignored) {}
 
     }//main
-
 }//DIT953.polygons.DrawPolygons
