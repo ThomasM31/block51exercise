@@ -22,7 +22,6 @@ public abstract class Polygon extends Shape {
             }
             from = to;
         }
-
     }
 
     protected abstract Point[] calculateOffsetsByScale();
@@ -30,6 +29,7 @@ public abstract class Polygon extends Shape {
     // TODO: 2: What design pattern does the getCorners() method
     //  make use of, when calling the abstract calculateOffsetsByScale()
     //  method internally?
+    //  Svar: Funktionell nedbrytning samt modularisering
     private List<Point> getCorners() {
         // Find the data for this particular polygon
         Point center = getCenterPoint();

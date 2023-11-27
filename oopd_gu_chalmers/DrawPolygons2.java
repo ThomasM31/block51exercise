@@ -1,18 +1,19 @@
-package oopd_gu_chalmers.polygons;
+package oopd_gu_chalmers;
 
-import oopd_gu_chalmers.polygons.polygon.*;
+import oopd_gu_chalmers.polygons.polygon.Polygon;
+import oopd_gu_chalmers.polygons.polygon.PolygonFactory;
 
 import javax.swing.*;
-import java.awt.Graphics;
-import java.util.*;
+import java.awt.*;
+import java.util.ArrayList;
 
-public class DrawPolygons extends JComponent{
+public class DrawPolygons2 extends JComponent{
     public ArrayList<oopd_gu_chalmers.polygons.polygon.Polygon> polygons;
     public boolean direction = true;
     public int ticker = 0;
     public JFrame frame;
 
-    public DrawPolygons() {
+    public DrawPolygons2() {
         polygons = new ArrayList<>(10);
         // TODO: 1b: Get rid of these constructor calls, and
         //   replace with calls to the new factory methods.
@@ -38,14 +39,14 @@ public class DrawPolygons extends JComponent{
 
     @Override
     public void paint(Graphics g) {
-        for (oopd_gu_chalmers.polygons.polygon.Polygon currentPolygon : polygons) {
+        for (Polygon currentPolygon : polygons) {
             currentPolygon.paint(g);
         }
     }//paint
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
-        DrawPolygons polygons = new DrawPolygons();
+        DrawPolygons2 polygons = new DrawPolygons2();
         polygons.frame = frame;
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

@@ -5,13 +5,21 @@ public class PolygonFactory {
     //  What arguments should these methods take?
     //  What should their result types be?
     //  Implement the methods, and let DrawPolygons use them.
-    // ... createTriangle ...
-    // ... createRectangle ...
-    // ... createSquare ...
+    public static Triangle createTriangle(int x, int y) {
+        return new Triangle(x,y);
+    }
+    public static Rectangle createRectangle(int x, int y) {
+        return new Rectangle(x,y);
+    }
+    public static Square createSquare(int x, int y) {
+        return new Square(x,y);
+    }
 }
+
 // TODO: 1c: Why should this class reside inside the
 //  oopd_gu_chalmers.polygons.polygon subpackage, and not in
 //  oopd_gu_chalmers.polygons together with DrawPolygons?
+//  Svar: Det är en del av utförarkoden ??? HCLC!! (Samband inom moduler/packages, färre mellan)
 
 // TODO: 1d: Draw a UML class diagram over the new
 //  structure for the package. What is the public
@@ -28,3 +36,4 @@ public class PolygonFactory {
 // TODO: 1h: Can you see any drawbacks with introducing
 //  a PolygonFactory, instead of exposing the subclasses
 //  directly?
+//
